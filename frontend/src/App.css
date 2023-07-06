@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rowdies', cursive;
+}
+
+body{
+  background-image: url('./assets/miles.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main{
+  max-width: 900px;
+  max-height: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+
+.title{
+  text-align: center;
+  padding: 20px 0;
+  text-shadow: 0 0 5px white;
+}
+
+.input_holderr {
+  display: flex;  
+  align-items: center;
+  gap: 20px;
+}
+
+
+input, button{
+  padding: 10px;
+}
+
+input {
+  border: 1px solid pink;
+  border-radius: 10px;
+  outline: none;
+  color: white;
+  background: transparent;
+}
+
+ul{
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding: 40px;
+  padding-bottom: 40px;
+}
+
+li{
+  /* background-color: rgb(216, 216, 216); */
+  background: rgb(162,11,11);
+  background: linear-gradient(341deg, 
+  rgba(162,11,11,1) 0%, 
+  rgba(127,16,210,1) 42%, 
+  rgba(9,49,154,1) 100%);
+  color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  flex: 0 1 250px;
+  border-radius: 10px;
+  text-shadow: 0 0 5px #000;
+}
+
+.icon_holder{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 12px;
+}
+/*-------------------Styles Edit button-------------------*/
+
+.Btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100px;
+  height: 40px;
+  border: none;
+  padding: 0px 20px;
+  background-color: rgb(168, 38, 255);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px rgb(140, 32, 212);
+  transition-duration: .3s ;
+}
+
+.svg {
+  width: 13px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  fill: white;
+  transition-duration: .3s;
+}
+
+.Btn:hover {
+  color: transparent;
+}
+
+.Btn:hover svg {
+  right: 43%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: .3s;
+}
+
+.Btn:active {
+  transform: translate(3px, 3px);
+  transition-duration: .3s;
+  box-shadow: 2px 2px 0px rgb(140, 32, 212);
+}
+
+/*-----------------styles delete button----------------*/
+
+.noselect {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  background: red;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px rgb(117, 7, 7);
+  background: #e62222;
+}
+
+.noselect, button span {
+  transition: 200ms;
+}
+
+.noselect .text {
+  transform: translateX(10px);
+  color: white;
+}
+
+.noselect .icon {
+  position: absolute;
+  border-left: 1px solid #c41b1b;
+  transform: translateX(50px);
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noselect svg {
+  width: 13px;
+  fill: #eee;
+}
+
+.noselect:hover {
+  background: #ff3636;
+}
+
+.noselect:hover .text {
+  color: transparent;
+}
+
+.noselect:hover .icon {
+  width: 100px;
+  border-left: none;
+  transform: translateX(-10px);
+}
+
+.noselect:focus {
+  outline: none;
+}
+
+.noselect:active .icon svg {
+  transform: scale(0.8);
+}
+.noselect:active {
+  box-shadow: 2px 2px 0px rgb(117, 7, 7);
+}
+
+
+/* .icon_holder{
+  display: flex;
+  gap: 10px;
+}
+
+.icon{
+  cursor: pointer;
+} */
+
+/*Style Button*/
+
+.button {
+  padding: 15px 20px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.button::after,
+.button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.button::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #28282d;
+  border-radius: 10px;
+}
+
+.button::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+button:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+button:hover::after {
+  border-radius: 10px;
+  transform: translate(0,0);
+  width: 100%;
+  height: 100%;
+}
+
+button:active::after {
+  transition: 0s;
+  transform: translate(0,5%);
+}
